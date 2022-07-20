@@ -23,6 +23,11 @@ class _HomeWidgetState extends State<HomeWidget> {
     return Scaffold(
       body: widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        onTap: onTabTapped,
         elevation: 0,
         currentIndex: selectedIndex,
         items: [
@@ -31,19 +36,31 @@ class _HomeWidgetState extends State<HomeWidget> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/home-svgrepo-com.svg'),
+            icon: SvgPicture.asset('assets/convert-3209.svg',
+            height: 30,
+            width: 30,),
             label: 'Transactions',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/home-svgrepo-com.svg'),
+            icon: SvgPicture.asset('assets/1420410486.svg',
+            height: 30,
+            width: 30,),
             label: 'Settings',
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/home-svgrepo-com.svg'),
+            icon: SvgPicture.asset('assets/account-box-svgrepo-com.svg',
+            height: 30,
+            width: 30,),
             label: 'Account',
           ),
         ],
       ),
     );
+  }
+
+  void onTabTapped(index) {
+    setState(() {
+      selectedIndex = index;
+    });
   }
 }
