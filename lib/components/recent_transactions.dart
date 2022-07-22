@@ -11,6 +11,17 @@ class RecentTransactions extends StatefulWidget {
 class _RecentTransactionsState extends State<RecentTransactions> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Expanded(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Recent Transactions'),
+                Text('See all'),
+              ],
+            ),
+          ],
+        ));
   }
 }

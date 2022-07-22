@@ -23,9 +23,10 @@ class _CreditCardState extends State<CreditCard> {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
                Padding(
-                 padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
+                 padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20.0),
                  child: Row(
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -36,16 +37,40 @@ class _CreditCardState extends State<CreditCard> {
                   ],
               ),
                ),
-            Column(
-              children: [
-                Text('John Doe', style: ThemeStyles.cardDetails),
-                Row(
-                  children: [
-                    Text('5339', style: ThemeStyles.cardDetails,),
-                    SvgPicture.asset('')
-                  ],
-                )
-              ],
+            Padding(
+              padding: const EdgeInsets.only(left: 20.0, bottom: 30.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('John Doe', style: ThemeStyles.cardDetails),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 5.0),
+                        child: Text('5339', style: ThemeStyles.cardDetails,),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                        child: SvgPicture.asset('assets/ellipsis-svgrepo-com.svg',
+                        color: Colors.grey,
+                        height: 20,
+                        width: 20,),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                        child: SvgPicture.asset('assets/ellipsis-svgrepo-com.svg',
+                          color: Colors.grey,
+                          height: 20,
+                          width: 20,),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0),
+                        child: Text('2241', style: ThemeStyles.cardDetails,),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),

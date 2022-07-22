@@ -15,7 +15,7 @@ class ThemeStyles{
 
   static TextStyle cardDetails = TextStyle(
     fontSize: 17.0,
-    color: Colors.black,
+    color: Colors.grey,
     fontWeight: FontWeight.w700,
   );
 
