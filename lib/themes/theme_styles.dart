@@ -8,8 +8,8 @@ class ThemeStyles{
     color: ThemeColors.black,
   );
 
-  static TextStyle seeAll = TextStyle(
-    fontSize: 12.0,
+  static TextStyle seeAll = const TextStyle(
+    fontSize: 14.0,
     color: Colors.black,
   );
 
