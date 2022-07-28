@@ -1,5 +1,7 @@
+import 'package:bankapp_ui/themes/theme_colors.dart';
 import 'package:bankapp_ui/themes/theme_styles.dart';
 import 'package:bankapp_ui/widgets/card_in_page.dart';
+import 'package:bankapp_ui/widgets/other_details_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -65,14 +67,66 @@ class _TransactionPageState extends State<TransactionPage> {
                     )
                   ],
                 ),
-                Row(
-                  children: [
-                    SvgPicture.asset('assets/transfer-svgrepo-com.svg'),
-                    Text('Bank Transfer', style: ThemeStyles.otherDetailsPrimary,)
-                  ],
-                )
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0, top: 5.0),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8,),
+                        child: SvgPicture.asset('assets/transfer-svgrepo-com.svg',
+                        height: 20,
+                        width: 20,),
+                      ),
+                      Text('Bank Transfer', style: ThemeStyles.otherDetailsPrimary,)
+                    ],
+                  ),
+                ),
+                OtherDetailsDivider(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 5.0, left: 16.0),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+                        child: Container(
+                          height: 32.0,
+                          width: 72.0,
+                          decoration: BoxDecoration(
+                            color: ThemeColors.lightGrey,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Center(child: Text('#finance', style: ThemeStyles.tagText,)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+                        child: Container(
+                          height: 32.0,
+                          width: 72.0,
+                          decoration: BoxDecoration(
+                            color: ThemeColors.lightGrey,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Center(child: Text('#fintory', style: ThemeStyles.tagText,)),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+                        child: Container(
+                          height: 32.0,
+                          width: 72.0,
+                          decoration: BoxDecoration(
+                            color: ThemeColors.lightGrey,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: Center(child: Text('#savings', style: ThemeStyles.tagText,)),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

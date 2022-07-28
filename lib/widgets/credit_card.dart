@@ -68,7 +68,7 @@ class _CreditCardState extends State<CreditCard> {
                         child: Text('2241', style: ThemeStyles.cardDetails,),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             )
