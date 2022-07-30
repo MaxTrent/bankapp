@@ -1,5 +1,6 @@
 import 'package:bankapp_ui/themes/theme_colors.dart';
 import 'package:bankapp_ui/themes/theme_styles.dart';
+import 'package:bankapp_ui/widgets/add_note.dart';
 import 'package:bankapp_ui/widgets/card_in_page.dart';
 import 'package:bankapp_ui/widgets/other_details_divider.dart';
 import 'package:flutter/material.dart';
@@ -119,12 +120,80 @@ class _TransactionPageState extends State<TransactionPage> {
                             color: ThemeColors.lightGrey,
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          child: Center(child: Text('#savings', style: ThemeStyles.tagText,)),
+                          child: Center(child: Text('#design', style: ThemeStyles.tagText,)),
                         ),
                       ),
+                      SvgPicture.asset('assets/edit-svgrepo-com.svg',
+                        height: 20,
+                        width: 20,),
                     ],
                   ),
                 ),
+                OtherDetailsDivider(),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('IBAN', style: ThemeStyles.otherDetailsSecondary,),
+                      SizedBox(height: 5.0,),
+                      Text('DE56 3982 1283 2339 39', style: ThemeStyles.otherDetailsPrimary,),
+                    ],
+                  ),
+                ),
+                OtherDetailsDivider(),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('BIC', style: ThemeStyles.otherDetailsSecondary,),
+                      SizedBox(height: 5.0,),
+                      Text('DUISDE33XX', style: ThemeStyles.otherDetailsPrimary,),
+                    ],
+                  ),
+                ),
+                OtherDetailsDivider(),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Posting Key', style: ThemeStyles.otherDetailsSecondary,),
+                      SizedBox(height: 5.0,),
+                      Text('247', style: ThemeStyles.otherDetailsPrimary,),
+                    ],
+                  ),
+                ),
+                OtherDetailsDivider(),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Purpose Code', style: ThemeStyles.otherDetailsSecondary,),
+                      SizedBox(height: 5.0,),
+                      Text('GLOB', style: ThemeStyles.otherDetailsPrimary,),
+                    ],
+                  ),
+                ),
+                OtherDetailsDivider(),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('SEPA Reference', style: ThemeStyles.otherDetailsSecondary,),
+                      SizedBox(height: 5.0,),
+                      Text('DE56 3982 1283 2339 39', style: ThemeStyles.otherDetailsPrimary,),
+                    ],
+                  ),
+                ),
+                AddNote(),
+
+
+
+
               ],
             ),
           ],
